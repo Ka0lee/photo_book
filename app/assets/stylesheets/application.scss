@@ -10,3 +10,19 @@
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
+
+.header{
+  height: 120px;
+  width: auto;
+  background-color: rgba(206, 22, 102, 0.651);
+  display: flex;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+.top-title{
+  background-color: rgba(206, 22, 102, 0.305);
+}
+.title{
+  font-size: 48px;
+}
