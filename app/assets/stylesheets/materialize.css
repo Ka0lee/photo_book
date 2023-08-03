@@ -9097,3 +9097,27 @@ a.btn-border:hover {
   color: #fff;
   background: #000;
 }
+/*トップページ*/
+.sidber{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.sidber_btn{
+  margin-right: 10px;
+
+}
+
+.first-view{
+  height: 120px;
+  width: 200vh;
+
+}
+
+.top-pic {
+  height: 100vh;
+  width: 100vh;
+
+}
+

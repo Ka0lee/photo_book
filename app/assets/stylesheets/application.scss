@@ -13,12 +13,18 @@
 
 .header{
   height: 120px;
-  width: auto;
+  width: 200vh;
   background-color: rgba(206, 22, 102, 0.651);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .material-icons.md-48 { font-size: 48px; }
+.Top{
+
+}
+
 
 .top-title{
   background-color: rgba(206, 22, 102, 0.305);
@@ -26,3 +32,9 @@
 .title{
   font-size: 48px;
 }
+
+.blank{
+  height: 60px;
+  width: auto;
+}
+
