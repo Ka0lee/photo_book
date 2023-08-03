@@ -14,7 +14,7 @@
 .header{
   height: 40%;
   width: 100%;
-  background-color: rgba(206, 22, 102, 0.651);
+  background-color: #c3b5d7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,3 +38,7 @@
   width: auto;
 }
 
+.textarea{
+  border-radius: none;
+  height: 100%;
+}

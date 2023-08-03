@@ -5,15 +5,15 @@
       <div class=title>PhotoBook<span class="material-icons md-48">add_a_photo</span>
     </div>
     <div class=sidber>
-      <div class=sidber_btn>
-      <a><%= link_to ">> Log in", root_path, class:"btn btn-border" %></a>
-      </div><br>
-      <div class=sidber_btn>
-      <a><%= link_to ">> Sign up", root_path, class:"btn btn-border" %></a>
-      </div><br>
-      <div class=sidber_btn>
-        <a><%= link_to ">> Log out", root_path, class:"btn btn-border" %></a>
-      </div><br>
+      <ul class=sidber_btn>
+         <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li>
+        <li><a><%= link_to ">> Log out", root_path, class:"btn btn-border" %></a></li>
+      <% else %>
+        <li><a><%= link_to ">> Log in", root_path, class:"btn btn-border" %></a></li>
+        <li><a><%= link_to ">> Sign up", root_path, class:"btn btn-border" %></a></li>
+    <% end %>
+      </ul><br>
     </div>
 
   </div>

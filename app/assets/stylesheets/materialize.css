@@ -9097,7 +9097,22 @@ a.btn-border:hover {
   color: #fff;
   background: #000;
 }
+
+
 /*トップページ*/
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #f8c1c3;
+  width: 200px;
+  height: auto;
+}
+.main {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
 .sidber{
 display: flex;
 justify-content: space-between;
@@ -9107,6 +9122,10 @@ align-items: center;
 .sidber_btn{
   margin-right: 10px;
 
+}
+.user-nickname{
+  text-decoration: none;
+  color: #000;
 }
 
 .top-info{
@@ -9130,7 +9149,7 @@ align-items: center;
 }
 
 .top-pic{
-  height: 70%;
-  width: 90%;
+  height: 40%;
+  width: 100%;
 }
 
