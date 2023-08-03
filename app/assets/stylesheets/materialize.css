@@ -9073,33 +9073,10 @@ text-align: center;
 }
 
 
-/*sign upボタン*/
-btn {
-	background: none;
-	border: none;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-.submit_btn{
-margin: 35px;
-}
-
-a.btn-border {
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-}
-
-a.btn-border:hover {
-  color: #fff;
-  background: #000;
-}
 
 
-/*トップページ*/
+
+/*トップページサイドバー*/
 .wrapper {
   display: flex;
 }
@@ -9113,21 +9090,8 @@ a.btn-border:hover {
   width: calc(100vw - 300px);
 }
 
-.sidber{
-display: flex;
-justify-content: space-between;
-align-items: center;
 
-}
-.sidber_btn{
-  margin-right: 10px;
-
-}
-.user-nickname{
-  text-decoration: none;
-  color: #000;
-}
-
+/*トップページbody部分*/
 .top-info{
   display: flex;
   justify-content: center;

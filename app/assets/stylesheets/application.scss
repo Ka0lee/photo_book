@@ -20,17 +20,21 @@
   align-items: center;
 }
 
-.material-icons.md-48 { font-size: 48px; }
-.Top{
-
+.material-icons.md-48 {
+  font-size: 48px; 
+  text-align: center;
 }
-
-
-.top-title{
-  background-color: rgba(206, 22, 102, 0.305);
+.logo{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: start;
 }
 .title{
   font-size: 48px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .blank{
@@ -41,4 +45,46 @@
 .textarea{
   border-radius: none;
   height: 100%;
+}
+
+.side-menu{
+  width: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  }
+  .side-menu_btn{
+    margin-right: 10px;
+    height: auto;
+  }
+  .user-nickname{
+    text-decoration: none;
+    color: #000;
+  }
+
+  /*ログイン・新規登録・ログアウトボタン*/
+btn {
+	background: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.submit_btn{
+margin: 35px;
+}
+
+a.btn-border {
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+a.btn-border:hover {
+  color: #fff;
+  background: #000;
 }
