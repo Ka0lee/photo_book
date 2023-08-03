@@ -4,10 +4,11 @@ PhotoBook
 画像や写真を投稿し、カテゴリーごとに分けることで過去に投稿したものを見比べたり整理しやすくして自分だけのアルバムを作るアプリ。 
 
 # URL
+https://photobook.onrender.com  
 
 # テスト用アカウント
--Basic認証パスワード：  
--Basic認証ID：  
+-Basic認証パスワード：  photo
+-Basic認証ID：  1224
 -メールアドレス：  
 -パスワード：  
 
