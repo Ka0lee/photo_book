@@ -2,13 +2,14 @@
 <html>
   <head>
   <div class=header>
-      <div class=title>PhotoBook<span class="material-icons md-48">add_a_photo</span>
-    </div>
-    <div class=sidber>
-      <ul class=sidber_btn>
+  <div class="logo">
+      <%= link_to PhotoBook, root_path, class:"title" %><span class="material-icons md-48">add_a_photo</span>
+  </div> 
+    <div class=side-menu>
+      <ul class=side-menu_btn>
          <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li>
-        <li><a><%= link_to ">> Log out", root_path, class:"btn btn-border" %></a></li>
+        <li><%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %></li>
+        <li><a><%= link_to ">> Log out", destroy_user_session_path, method: :delete, class:"btn btn-border" %></a></li>
       <% else %>
         <li><a><%= link_to ">> Log in", root_path, class:"btn btn-border" %></a></li>
         <li><a><%= link_to ">> Sign up", root_path, class:"btn btn-border" %></a></li>
