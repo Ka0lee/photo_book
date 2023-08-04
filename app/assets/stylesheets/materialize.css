@@ -9073,42 +9073,25 @@ text-align: center;
 }
 
 
-/*sign upボタン*/
-btn {
-	background: none;
-	border: none;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+
+
+
+/*トップページサイドバー*/
+.wrapper {
+  display: flex;
 }
-.submit_btn{
-margin: 35px;
+.side-bar {
+  background-color: #f8c1c3;
+  width: 200px;
+  height: auto;
+}
+.main {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
 }
 
-a.btn-border {
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-}
 
-a.btn-border:hover {
-  color: #fff;
-  background: #000;
-}
-/*トップページ*/
-.sidber{
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-}
-.sidber_btn{
-  margin-right: 10px;
-
-}
-
+/*トップページbody部分*/
 .top-info{
   display: flex;
   justify-content: center;
@@ -9117,7 +9100,7 @@ align-items: center;
 
 .top{
   height: 100%;
-  width: 200vh;
+  width: 200vw;
 
 }
 
@@ -9130,7 +9113,31 @@ align-items: center;
 }
 
 .top-pic{
-  height: 70%;
-  width: 90%;
+  height: 40%;
+  width: 100%;
+}
+
+/*投稿ボタン*/
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 50%;
+  right: 32px;
+  bottom: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
 }
 

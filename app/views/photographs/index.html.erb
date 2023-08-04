@@ -1,13 +1,54 @@
+<div class="wrapper">
+    <%# サイドバー %>
+    <div class="side-bar">
+        <%#= render "side_bar" %>
+      <div class=side-bar_menu>
 
-<div class="top_info">
-  <div class="blank"></div>
-  <div class= "Top">
-    <div class="first-view">
-        <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
-    </div>
-  </div>
-      <div class="top-title">
-        <div class="title"><h1>Photographs#index<span class="material-icons md-48">add_a_photo</span></h1>
+        <div class=side-bar_link>
+        <span class="material-icons">saved_search</span>
+        検索フォーム
+        </div>
+
+        <div class=side-bar_link>
+        <span class="material-icons">collections</span>
+        <%= link_to "写真一覧", root_path %>
+        </div>
+
+        <div class=side-bar_link>
+        <span class="material-icons">category</span>
+        <%= link_to "カテゴリー", root_path %>
+        </div>
+
+        <div class=side-bar_link>
+        <span class="material-icons">folder</span>
+        <%= link_to "フォルダ", root_path %>
+        </div>
+
+        <div class=side-bar_link>
+        <span class="material-icons">menu_book</span>
+        <%= link_to "日記一覧", root_path %>
+        </div>
+
+        <div class=side-bar_link>
+        <span class="material-icons">bookmarks</span><%= link_to "お気に入り", root_path %>
         </div>
       </div>
+    </div>
+
+   <%# メイン　%>
+    <div class="main">
+        <div class="top_info">
+          <div class= "Top">
+            <div class="first-view">
+                <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
+
+                <%# 投稿ボタン %>
+                <%= link_to root_path, class: 'purchase-btn' do %>
+                  <span class='purchase-btn-text'>  投稿する</span>
+                  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+                <% end %>
+            </div>
+          </div>
+        </div>
+    </div>
 </div>
