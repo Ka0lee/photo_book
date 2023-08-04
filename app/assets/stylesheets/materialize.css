@@ -9100,7 +9100,7 @@ text-align: center;
 
 .top{
   height: 100%;
-  width: 200vh;
+  width: 200vw;
 
 }
 
@@ -9115,5 +9115,29 @@ text-align: center;
 .top-pic{
   height: 40%;
   width: 100%;
+}
+
+/*投稿ボタン*/
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 50%;
+  right: 32px;
+  bottom: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
 }
 
