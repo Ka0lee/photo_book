@@ -1,0 +1,17 @@
+<%= form_with model: @photographs, id: 'new_post', local: true do |f| %>
+<%#= render 'shared/error_messages', model: f.object %>
+  <div class="input-form">
+    <div class="field">
+    <%= f.label :photograph_title, "タイトル", class:"form_name" %><br />
+    <%= f.text_field :title, class:"form_field" %>
+  </div>
+  <div class="image-field">
+    <div id="previews"></div>
+    <div class="click-upload">
+      <%= f.file_field :images, name: 'photographs[images][]', data: {index: 0} %>
+    </div>
+  </div>
+  <div class="submit-btn">
+    <%= f.submit '保存' %>
+  </div>
+<% end %>
