@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <div class=header>
-  <div class="logo">
-      <%= link_to PhotoBook, root_path, class:"title" %><span class="material-icons md-48">add_a_photo</span>
-  </div> 
-    <div class=side-menu>
-      <ul class=side-menu_btn>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+
+        <div class="header">
+    <div class="logo">
+      <%= link_to(root_path, class: "title") do %>
+          PhotoBook
+        <%= image_tag('camera_white_48dp.png', resize: '18x18', class: "logo_icon") %>
+      <% end %>
+    </div>
+    <div class="side-menu">
+      <ul class="side-menu_btn">
          <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %></li>
+        <li>HELLO！<%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %>さん</li>
         <li><a><%= link_to ">> Log out", destroy_user_session_path, method: :delete, class:"btn btn-border" %></a></li>
       <% else %>
         <li><a><%= link_to ">> Log in", new_user_session_path, class:"btn btn-border" %></a></li>
@@ -18,13 +31,6 @@
     </div>
 
   </div>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
   </head>
 
   <body>
