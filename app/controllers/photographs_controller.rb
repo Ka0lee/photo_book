@@ -1,14 +1,16 @@
 class PhotographsController < ApplicationController
-  
+  before_action :authenticate_user!,except:[:index]
+
   def index
+    @photograph = Photograph.includes(:user)
   end
 
   def new
-    @Photograph = Photograph.new
+    @photograph = Photograph.new
   end
 
   def create
-    @photograph= Photograph.new(photograph_params)
+    @photograph = Photograph.new(photograph_params)
     if @photograph.save
       redirect_to root_path
     else
