@@ -59,16 +59,20 @@
                 <% end %>
             </div>
           </div>
-        </div>
+
 <% @photograph.each do |photo| %>
   <% if photo.images.attached? %>
+    <div class="photo-cards">
     <div class="card">
       <%= link_to photograph_path(photo) do %>
         <%= image_tag photo.images[0].variant(resize: '180x180'), class: :card__img %>
       <% end %>
     </div>
+    </div>
   <% end %>
+
 <% end %>
+        </div>
 
 
 </div>

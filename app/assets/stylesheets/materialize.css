@@ -9133,6 +9133,14 @@ text-align: center;
   width: 100%;
 }
 
+.photo-cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
 /*投稿ボタン*/
 .purchase-btn {
   width: 120px;
