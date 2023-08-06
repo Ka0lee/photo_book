@@ -1,13 +1,16 @@
 class PhotographsController < ApplicationController
+  before_action :authenticate_user!,except:[:index]
+
   def index
+    @photograph = Photograph.includes(:user)
   end
 
   def new
-    @Photograph = Photograph.new
+    @photograph = Photograph.new
   end
 
   def create
-    @photograph= Photograph.new(photograph_params)
+    @photograph = Photograph.new(photograph_params)
     if @photograph.save
       redirect_to root_path
     else
@@ -15,9 +18,13 @@ class PhotographsController < ApplicationController
     end
   end
 
+  def show
+    @photograph = Photograph.find(params[:id])
+  end
+
 private
 def photograph_params
-  params.require(:photograph).permit(:title, :info, :date, :image).merge(user_id: current_user.id)
+  params.require(:photograph).permit(:title, :info, :date, {images: []}).merge(user_id: current_user.id)
   
 end
 

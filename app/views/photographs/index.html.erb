@@ -4,33 +4,44 @@
         <%#= render "side_bar" %>
       <div class=side-bar_menu>
 
-        <div class=side-bar_link>
+        <div class="side-bar_link">
         <span class="material-icons">saved_search</span>
         検索フォーム
         </div>
 
-        <div class=side-bar_link>
-        <span class="material-icons">collections</span>
-        <%= link_to "写真一覧", root_path %>
+        <div class="side-bar_link">
+          <%= link_to(root_path) do %>
+            <%= image_tag('collections_black_24dp.png', class: "side-bar_icons") %>
+            写真一覧
+          <% end %>
+          </div>
+
+        <div class="side-bar_link">
+          <%= link_to(root_path) do %>
+            <%= image_tag('category_black_24dp.png', class: "side-bar_icons") %>
+            カテゴリー
+          <% end %>
         </div>
 
-        <div class=side-bar_link>
-        <span class="material-icons">category</span>
-        <%= link_to "カテゴリー", root_path %>
+        <div class="side-bar_link">
+          <%= link_to(root_path) do %>
+            <%= image_tag('folder_black_24dp.png', class: "side-bar_icons") %>
+            フォルダ
+          <% end %>
         </div>
 
-        <div class=side-bar_link>
-        <span class="material-icons">folder</span>
-        <%= link_to "フォルダ", root_path %>
+        <div class="side-bar_link">
+          <%= link_to(root_path) do %>
+            <%= image_tag('menu_book_black_24dp.png', class: "side-bar_icons") %>
+            日記一覧
+          <% end %>
         </div>
 
-        <div class=side-bar_link>
-        <span class="material-icons">menu_book</span>
-        <%= link_to "日記一覧", root_path %>
-        </div>
-
-        <div class=side-bar_link>
-        <span class="material-icons">bookmarks</span><%= link_to "お気に入り", root_path %>
+        <div class="side-bar_link">
+          <%= link_to(root_path) do %>
+            <%= image_tag('bookmarks_black_24dp.png', class: "side-bar_icons") %>
+            お気に入り
+          <% end %>
         </div>
       </div>
     </div>
@@ -43,11 +54,25 @@
                 <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
 
                 <%# 投稿ボタン %>
-                <%= link_to new_photograph_path, class: 'purchase-btn' do %>
-                  <%= image_tag 'baseline_add_photo_alternate_white_48dp.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+                <%= link_to(new_photograph_path, class: 'purchase-btn') do %>
+                  <%= image_tag('add_photo_alternate_white_48dp.png', size: '185x50', class: "purchase-btn-icon") %>
                 <% end %>
             </div>
           </div>
-        </div>
+
+<% @photograph.each do |photo| %>
+  <% if photo.images.attached? %>
+    <div class="photo-cards">
+    <div class="card">
+      <%= link_to photograph_path(photo) do %>
+        <%= image_tag photo.images[0].variant(resize: '180x180'), class: :card__img %>
+      <% end %>
     </div>
+    </div>
+  <% end %>
+
+<% end %>
+        </div>
+
+
 </div>

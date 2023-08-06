@@ -9073,9 +9073,6 @@ text-align: center;
 }
 
 
-
-
-
 /*トップページサイドバー*/
 .wrapper {
   display: flex;
@@ -9089,6 +9086,25 @@ text-align: center;
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
 }
+.side-bar_link a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+.side-bar_link{
+  height: 50px;
+  border: #263238;
+  padding: 10px;
+  background-color: #efebe9;
+  margin: 10px;
+  text-align: center;
+}
+.side-bar_icons{
+  height: 24px;
+  width: 24px;
+
+}
+
 
 
 /*トップページbody部分*/
@@ -9117,6 +9133,14 @@ text-align: center;
   width: 100%;
 }
 
+.photo-cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
 /*投稿ボタン*/
 .purchase-btn {
   width: 120px;
@@ -9144,3 +9168,39 @@ text-align: center;
   width: 60%;
 }
 
+/*投稿フォーム画像*/
+
+.previews img {
+  height: 100px;
+  width: 100px;
+  /* 縦横比を保ったまま、画像を縦横100pxのサイズに収める*/
+  object-fit: contain;
+}
+
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+}
+
+#previews {
+  display: flex;
+}
+
+.preview{
+  margin-right: 30px;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.main-image {
+  height: 200px;
+  width: 200px;
+}

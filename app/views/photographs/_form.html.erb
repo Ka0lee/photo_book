@@ -1,17 +1,30 @@
-<%= form_with model: @photographs, id: 'new_post', local: true do |f| %>
+<%= form_with model: @photograph, url: photographs_path, id: 'new_post', local: true do |f| %>
 <%#= render 'shared/error_messages', model: f.object %>
   <div class="input-form">
     <div class="field">
     <%= f.label :photograph_title, "タイトル", class:"form_name" %><br />
     <%= f.text_field :title, class:"form_field" %>
   </div>
+
+  <div class="field">
+    <%= f.label :photograph_date, "撮影日", class:"form_name" %><br />
+    <%= f.text_field :date, class:"form_field" %>
+  </div>
+
   <div class="image-field">
-    <div id="previews"></div>
+    <div class="previews", id="previews"></div>
     <div class="click-upload">
-      <%= f.file_field :images, name: 'photographs[images][]', data: {index: 0} %>
+      <%= f.file_field :images, name: 'photograph[images][]', data: {index: 0}%>
     </div>
   </div>
+
+  <div class="field">
+    <%= f.label :photograph_info, "内容", class:"form_name" %><br />
+    <%= f.text_area :info, class:"form_field" %>
+  </div>
+
   <div class="submit-btn">
     <%= f.submit '保存' %>
   </div>
+ </div>
 <% end %>

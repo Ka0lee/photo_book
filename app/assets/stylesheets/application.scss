@@ -10,7 +10,7 @@
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
-
+/*トップページヘッダー部分*/
 .header{
   height: 40%;
   width: 100%;
@@ -20,8 +20,8 @@
   align-items: center;
 }
 
-.material-icons.md-48 {
-  font-size: 48px; 
+.logo_icon {
+  font-size: 15px; 
   text-align: center;
 }
 .logo{
@@ -60,7 +60,9 @@
 }
 .user-nickname{
   text-decoration: none;
-  color: #000;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
   /*ログイン・新規登録・ログアウトボタン*/
