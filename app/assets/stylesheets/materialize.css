@@ -9137,6 +9137,11 @@ text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.photo-cards_content{
 
 }
 
@@ -9170,20 +9175,13 @@ text-align: center;
 
 /*投稿フォーム画像*/
 
-.previews img {
-  height: 100px;
-  width: 100px;
+.previews img{
+  height: 270px;
+  width: 250px;
   /* 縦横比を保ったまま、画像を縦横100pxのサイズに収める*/
   object-fit: contain;
 }
 
-.other-images {
-  display: flex;
-}
-
-.other-image {
-  margin-right: 10px;
-}
 
 #previews {
   display: flex;
@@ -9203,4 +9201,25 @@ text-align: center;
 .main-image {
   height: 200px;
   width: 200px;
+}
+
+.click-upload{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/*トップページ投稿画像一覧*/
+.card-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.card-image img {
+  margin-right: 10px;
+  height: 300px;
+  width: 300px;
 }

@@ -52,27 +52,33 @@
           <div class= "Top">
             <div class="first-view">
                 <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
+            </div>
+          </div>
+
+          <div class="photo-cards">            
+            <% @photograph.each do |photo| %>
+              <% if photo.images.attached? %>
+
+                  <div class="photo-cards_content">
+                    <%= link_to photograph_path(photo) do %>
+                        <div class="card-images">
+                            <% photo.images[0..-1].each do |image| %>
+                              <div class="card-image">
+                                <%= image_tag image.variant(resize: '300x300') %>
+                              </div>
+                            <% end %>
+                        </div>
+                    <% end %>
+                  </div>
+
+              <% end %>
+            <% end %>
+          </div>
+        </div>
 
                 <%# 投稿ボタン %>
                 <%= link_to(new_photograph_path, class: 'purchase-btn') do %>
                   <%= image_tag('add_photo_alternate_white_48dp.png', size: '185x50', class: "purchase-btn-icon") %>
                 <% end %>
-            </div>
-          </div>
-
-<% @photograph.each do |photo| %>
-  <% if photo.images.attached? %>
-    <div class="photo-cards">
-    <div class="card">
-      <%= link_to photograph_path(photo) do %>
-        <%= image_tag photo.images[0].variant(resize: '180x180'), class: :card__img %>
-      <% end %>
     </div>
-    </div>
-  <% end %>
-
-<% end %>
-        </div>
-
-
 </div>
