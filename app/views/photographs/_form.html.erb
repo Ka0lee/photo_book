@@ -10,6 +10,11 @@
     <%= f.text_field :title, class:"form_field" %>
   </div>
 
+    <div class="field">
+    <%= f.label :photograph_category, "カテゴリー", class:"form_name" %><br />
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form_field"}) %>
+    </div>
+
   <div class="field">
     <%= f.label :photograph_date, "撮影日", class:"form_name" %><br />
     <%= f.text_field :date, class:"form_field" %>
