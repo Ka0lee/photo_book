@@ -9054,11 +9054,17 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
-/*新規登録画面(registration)*/
+/*ログイン・新規登録画面(registration)*/
 .TOP{
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.TOP h2{
+  margin-top: 150px;
+
 }
 
 .sign-up{
@@ -9070,21 +9076,28 @@ text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 0vh;
 }
 
 
 /*トップページサイドバー*/
 .wrapper {
   display: flex;
+  height: 100%;
 }
+
 .side-bar {
   background-color: #f8c1c3;
   width: 200px;
-  height: auto;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 .main {
   background-color: #FFFFFF;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 200px);
+  margin-left: 200px;
 }
 .side-bar_link a{
   text-decoration: none;
@@ -9096,15 +9109,29 @@ text-align: center;
   border: #263238;
   padding: 10px;
   background-color: #efebe9;
-  margin: 10px;
+  margin: 20px 10px;
   text-align: center;
 }
 .side-bar_icons{
   height: 24px;
   width: 24px;
-
 }
 
+.side-bar_menu{
+margin-top: 40px;
+}
+
+.greeting{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.user-nickname{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 
 /*トップページbody部分*/
@@ -9126,6 +9153,7 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 15vh;
 }
 
 .top-pic{
@@ -9139,6 +9167,7 @@ text-align: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 15vh;
 }
 
 .photo-cards_content{
