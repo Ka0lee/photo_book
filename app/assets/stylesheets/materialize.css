@@ -7108,9 +7108,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 
 /* Select Field
    ========================================================================== */
-select {
-  display: none;
-}
+
 
 select.browser-default {
   display: block;
@@ -7118,9 +7116,9 @@ select.browser-default {
 
 select {
   background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
+  width: 156px;
   padding: 5px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid black;
   border-radius: 2px;
   height: 3rem;
 }
@@ -9079,6 +9077,11 @@ text-align: center;
   margin-top: 0vh;
 }
 
+.category-select{
+  height: 30px;
+  width: 250px;
+}
+
 
 /*トップページサイドバー*/
 .wrapper {
@@ -9139,6 +9142,8 @@ margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
 }
 
 .top{
@@ -9170,8 +9175,8 @@ margin-top: 40px;
   margin-top: 15vh;
 }
 
-.photo-cards_content{
-
+.card-image{
+  width:25%;
 }
 
 
@@ -9244,11 +9249,10 @@ margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .card-image img {
-  margin-right: 10px;
   height: 300px;
   width: 300px;
 }
