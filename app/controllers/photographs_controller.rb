@@ -2,11 +2,15 @@ class PhotographsController < ApplicationController
   before_action :authenticate_user!,except:[:index]
 
   def index
-    @photograph = Photograph.includes(:user)
+    @photographs = Photograph.includes(:user)
+    if user_signed_in?
+      @photograph = @photographs.where(user_id: current_user.id)
+    end
   end
 
   def new
     @photograph = Photograph.new
+
   end
 
   def create
