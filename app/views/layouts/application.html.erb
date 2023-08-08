@@ -21,7 +21,6 @@
     <div class="side-menu">
       <ul class="side-menu_btn">
          <% if user_signed_in? %>
-        <li>HELLO！<%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %>さん</li>
         <li><a><%= link_to ">> Log out", destroy_user_session_path, method: :delete, class:"btn btn-border" %></a></li>
       <% else %>
         <li><a><%= link_to ">> Log in", new_user_session_path, class:"btn btn-border" %></a></li>
