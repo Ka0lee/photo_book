@@ -32,10 +32,10 @@ https://docs.google.com/spreadsheets/d/1gBix3rLaH8tMfYi31HoIqW_qJWR3K-kefBx305Im
 現在画像投稿機能を実装中。
 今後は検索機能や、フォルダ分け機能を実装予定。
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/c75c2aa941e06bbeeb9345deb44cbe7c.png)](https://gyazo.com/c75c2aa941e06bbeeb9345deb44cbe7c)
+[![Image from Gyazo](https://i.gyazo.com/2ab51ca31c9bab4b517fdef5447057a9.png)](https://gyazo.com/2ab51ca31c9bab4b517fdef5447057a9)　
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/1ccf72364d05e9c0a7e7e82101cb09c4.png)](https://gyazo.com/1ccf72364d05e9c0a7e7e82101cb09c4)
+[![Image from Gyazo](https://i.gyazo.com/7a7c0ffb8a9ab67d3d4bd80cc4a5c802.png)](https://gyazo.com/7a7c0ffb8a9ab67d3d4bd80cc4a5c802)
 
 # 開発環境
 
