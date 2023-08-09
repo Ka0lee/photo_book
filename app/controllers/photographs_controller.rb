@@ -4,7 +4,7 @@ class PhotographsController < ApplicationController
   def index
     @photographs = Photograph.includes(:user)
     if user_signed_in?
-      @photograph = @photographs.where(user_id: current_user.id)
+     @photograph = @photographs.where(user_id: current_user.id)
     end
   end
 
@@ -28,7 +28,7 @@ class PhotographsController < ApplicationController
 
 private
 def photograph_params
-  params.require(:photograph).permit(:title, :info, :date, :category_id, {images: []}).merge(user_id: current_user.id)
+  params.require(:photograph).permit(:title, :diary, :date, :category_id, {images: []}).merge(user_id: current_user.id)
   
 end
 

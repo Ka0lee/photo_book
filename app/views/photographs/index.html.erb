@@ -55,23 +55,27 @@
         <div class="top_info">
 
           <% if user_signed_in? %>
-          <% if @photograph.nil? %>
+          <%# if @photograph.nil? %>
              <div class= "Top">
               <div class="first-view">
                   <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
               </div>
              </div>
-          <% end %>
+          <%# end %>
 
             <% if @photograph.present? %>
-            <div class="photo-cards">            
+
+            <div class="photo-cards">
               <% @photographs.each do |photo| %>
                     <div class="photo-cards_content">
+                        <div class="cards-date">
+                           <%= photo.date %>
+                        </div>
                       <%= link_to photograph_path(photo) do %>
                           <div class="card-images">
                               <% photo.images[0..-1].each do |image| %>
                                 <div class="card-image">
-                                  <%= image_tag image.variant(resize: '300x300') %>
+                                  <%= image_tag image %>
                                 </div>
                               <% end %>
                           </div>
