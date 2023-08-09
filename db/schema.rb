@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2023_08_04_082820) do
 
   create_table "photographs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
-    t.string "info"
+    t.string "diary"
     t.date "date", null: false
     t.integer "category_id", null: false
     t.bigint "user_id", null: false
