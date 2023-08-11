@@ -18,8 +18,17 @@
       <% end %>
 
       <div class="photograph__image">
-        <%= image_tag @photograph.images %>
-      </div>
+      <% if @photograph.images.attached? %>
+       <div class="card-images">
+            <% @photograph.images[0..-1].each do |image| %>
+              <div class="card-image">
+                <%= image_tag image %>
+              </div>
+            <% end %>
+        </div>
+        </div>
+      <% end %>  
+
       <div class="photograph__body">
         <div class="@photograph__detail">
           <p class="detail__title">撮影日時</p>
@@ -30,7 +39,7 @@
         <div class="photograph__detail">
           <p class="detail__title">カテゴリー</p>
           <p class="detail__message">
-            <%= @photograph.Category.find(@photograph.category_id).name %>
+            <%= @photograph.category.name %>
           </p>
         </div>
         <div class="photograph__detail">
