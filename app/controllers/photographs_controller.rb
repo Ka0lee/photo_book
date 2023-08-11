@@ -1,5 +1,8 @@
 class PhotographsController < ApplicationController
-  before_action :authenticate_user!,except:[:index]
+  before_action :authenticate_user!,except:[:index,:show]
+  before_action :set_photograph,only:[:show, :edit, :update, :destroy]
+  before_action :contributor_confirmation,only:[:edit, :destroy]
+
 
   def index
     @photographs = Photograph.includes(:user)
@@ -23,14 +26,41 @@ class PhotographsController < ApplicationController
   end
 
   def show
-    @photograph = Photograph.find(params[:id])
   end
 
-private
-def photograph_params
-  params.require(:photograph).permit(:title, :diary, :date, :category_id, {images: []}).merge(user_id: current_user.id)
-  
-end
+  def edit
 
+  end
+
+  def update
+    if @photograph.update(photograph_params)
+      redirect_to photograph_path(@photograph)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @photograph.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
+
+private
+
+  def photograph_params
+    params.require(:photograph).permit(:title, :diary, :date, :category_id, {images: []}).merge(user_id: current_user.id)
+  end
+
+  def set_photograph
+    @photograph = Photograph.find(params[:id]) 
+  end
+
+  def contributor_confirmation
+    redirect_to root_path unless @photograph.user == current_user
+  end
 
 end
