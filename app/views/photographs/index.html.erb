@@ -55,15 +55,12 @@
         <div class="top_info">
 
           <% if user_signed_in? %>
-          <%# if @photograph.nil? %>
              <div class= "Top">
               <div class="first-view">
                   <%= image_tag "TOP画像 (2).jpg" , class:"top-pic" %>
               </div>
              </div>
-          <%# end %>
 
-            <% if @photograph.present? %>
 
             <div class="photo-cards">
               <% @photographs.each do |photo| %>
@@ -83,7 +80,7 @@
                     </div>
               <% end %>
             </div>
-            <% end %>
+            
           <% else %>
              <div class= "Top">
               <div class="first-view">
