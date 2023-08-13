@@ -8,7 +8,6 @@ class Photograph < ApplicationRecord
   validates :category_id, numericality: { other_than: 1, message: "は---以外を選択してください" }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :category  
-
+  belongs_to :category
 
 end
