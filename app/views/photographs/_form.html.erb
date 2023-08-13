@@ -3,7 +3,10 @@
 </div>
 
 <%= form_with model: @photograph, url: photographs_path, id: 'new_post', local: true do |f| %>
-<%= render 'layouts/error_messages', model: form.object %>
+  <div class="error_explanation" >
+   <%= render 'layouts/error_messages', model: f.object %>
+  </div>
+   
   <div class="input-form">
     <div class="field">
     <%= f.label :photograph_title, "タイトル", class:"form_name" %><br />
