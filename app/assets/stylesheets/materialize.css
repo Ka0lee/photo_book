@@ -9222,7 +9222,7 @@ margin-top: 40px;
 }
 
 .preview{
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .image-delete-button {
@@ -9265,4 +9265,15 @@ margin-top: 40px;
 .card-image img {
   height: 300px;
   width: 300px;
+}
+/*  エラーメッセージ  */
+.error_explanation{
+  font-size: 14.5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+.login-flash-message{
+  color: red;
 }

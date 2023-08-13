@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      tweet:
+        text: テキスト
+        image: 画像
+
+    attributes:    
+      photograph:
+        title: タイトル
+        date: 撮影日時
+        images: 画像
+        category_id: カテゴリー
+      
