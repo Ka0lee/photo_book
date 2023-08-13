@@ -9266,3 +9266,14 @@ margin-top: 40px;
   height: 300px;
   width: 300px;
 }
+/*  エラーメッセージ  */
+.error_explanation{
+  font-size: 14.5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+.login-flash-message{
+  color: red;
+}
