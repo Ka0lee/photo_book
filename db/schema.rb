@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 2023_08_04_082820) do
 
   create_table "photographs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
-    t.text "diary"
     t.date "date", null: false
     t.integer "category_id", null: false
     t.bigint "user_id", null: false
+    t.text "diary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_photographs_on_user_id"
