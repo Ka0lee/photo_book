@@ -45,6 +45,7 @@ class PhotographsController < ApplicationController
     if @photograph.destroy
       redirect_to root_path
     else
+      flash.now[:alert] = '写真の保存に失敗しました。'
       redirect_to root_path
     end
   end
@@ -53,7 +54,7 @@ class PhotographsController < ApplicationController
 private
 
   def photograph_params
-    params.require(:photograph).permit(:title, :date, :category_id, {images: []}).merge(user_id: current_user.id)
+    params.require(:photograph).permit(:title, :date, :daybook, :category_id, {images: []}).merge(user_id: current_user.id)
   end
 
   def set_photograph

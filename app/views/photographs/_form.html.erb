@@ -2,11 +2,19 @@
 <h2>Add PHOTO</h2>
 </div>
 
+
 <%= form_with model: @photograph, url: photographs_path, id: 'new_post', local: true do |f| %>
-  <div class="error_explanation" >
-   <%= render 'layouts/error_messages', model: f.object %>
+<% if @photograph.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@photograph.errors.count, "エラー") %>があります:</h2>
+    <ul>
+      <% @photograph.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
-   
+<% end %>
+
   <div class="input-form">
     <div class="field">
     <%= f.label :photograph_title, "タイトル", class:"form_name" %><br />
