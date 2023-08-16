@@ -69,3 +69,7 @@ gem 'pry-rails'
 gem 'active_hash'
 
 gem 'rails-i18n'
+
+group :development do
+  gem 'rubocop', require: false
+end
