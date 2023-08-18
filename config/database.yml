@@ -55,4 +55,4 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  password: <%= ENV['PHOTO_BOOK_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
