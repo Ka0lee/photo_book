@@ -54,7 +54,7 @@ class PhotographsController < ApplicationController
 private
 
   def photograph_params
-    params.require(:photograph).permit(:title, :date, :daybook, :category_id, {images: []}).merge(user_id: current_user.id)
+    params.require(:photograph).permit(:title, :date, :diary, :category_id, {images: []}).merge(user_id: current_user.id)
   end
 
   def set_photograph

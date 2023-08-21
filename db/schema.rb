@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2023_08_18_130444) do
     t.date "date", null: false
     t.integer "category_id", null: false
     t.bigint "user_id", null: false
-    t.text "daybook"
+    t.text "diary"
     t.index ["user_id"], name: "index_photographs_on_user_id"
   end
 
