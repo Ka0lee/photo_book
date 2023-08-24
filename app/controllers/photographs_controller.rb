@@ -1,7 +1,8 @@
 class PhotographsController < ApplicationController
-  before_action :authenticate_user!,except:[:index,:show]
+  before_action :authenticate_user!,except:[:index, :show]
   before_action :set_photograph,only:[:show, :edit, :update, :destroy]
-  before_action :contributor_confirmation,only:[:edit, :destroy]
+  before_action :contributor_confirmation,only:[:edit, :destroy, :search]
+  
 
 
   def index
@@ -48,6 +49,10 @@ class PhotographsController < ApplicationController
       flash.now[:alert] = '写真の保存に失敗しました。'
       redirect_to root_path
     end
+  end
+
+  def search
+    @photographs = Photograph.search(params[:keyword])
   end
 
 
