@@ -10,4 +10,12 @@ class Photograph < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
 
+  def self.search(search)
+    if search != ""
+      Photograph.where('text LIKE(?)', "%#{search}%")
+    else
+      Photograph.all
+    end
+  end
+
 end
