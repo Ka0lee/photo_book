@@ -9121,7 +9121,37 @@ text-align: center;
 }
 
 .side-bar_menu{
-margin-top: 40px;
+  margin-top: 40px;
+}
+
+.side-bar_search_link{
+  height: 50px;
+  border: #263238;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  margin: 40px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-form{
+  width: 100%;
+}
+
+.search-input{
+  width: 100%;
+}
+.side-bar_search_icons{
+  border: none;
+  height: 24px;
+  width: 24px;
+}
+
+.search-input{
+  width: 24px;
 }
 
 .greeting{
