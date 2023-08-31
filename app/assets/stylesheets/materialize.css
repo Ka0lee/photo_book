@@ -6097,7 +6097,6 @@ label {
 
 /* Text inputs */
 input:not([type]),
-input[type=text]:not(.browser-default),
 input[type=password]:not(.browser-default),
 input[type=email]:not(.browser-default),
 input[type=url]:not(.browser-default),
@@ -6108,25 +6107,7 @@ input[type=datetime-local]:not(.browser-default),
 input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
-textarea.materialize-textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #9e9e9e;
-  border-radius: 0;
-  outline: none;
-  height: 3rem;
-  font-size: 16px;
-  margin: 0 0 8px 0;
-  padding: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  -webkit-transition: border .3s, -webkit-box-shadow .3s;
-  transition: border .3s, -webkit-box-shadow .3s;
-  transition: box-shadow .3s, border .3s;
-  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
-}
+
 
 input:not([type]):disabled, input:not([type])[readonly="readonly"],
 input[type=text]:not(.browser-default):disabled,
@@ -6154,7 +6135,6 @@ input[type=search]:not(.browser-default)[readonly="readonly"],
 textarea.materialize-textarea:disabled,
 textarea.materialize-textarea[readonly="readonly"] {
   color: rgba(0, 0, 0, 0.42);
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
 }
 
 input:not([type]):disabled + label,
@@ -7137,26 +7117,6 @@ select {
   pointer-events: none;
 }
 
-.select-wrapper input.select-dropdown {
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #9e9e9e;
-  outline: none;
-  height: 3rem;
-  line-height: 3rem;
-  width: 100%;
-  font-size: 16px;
-  margin: 0 0 8px 0;
-  padding: 0;
-  display: block;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  z-index: 1;
-}
 
 .select-wrapper input.select-dropdown:focus {
   border-bottom: 1px solid #26a69a;
@@ -9121,9 +9081,52 @@ text-align: center;
 }
 
 .side-bar_menu{
-margin-top: 40px;
+  margin-top: 40px;
 }
 
+.side-bar_search_link{
+  height: 50px;
+  border: #263238;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  margin: 40px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*(検索フォーム)*/
+.side-bar_search_link{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.search-form{
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  outline:0;
+  margin-left: 5px;
+}
+
+
+.side-bar_search_icons{
+  border: none;
+  height: 24px;
+  width: 24px;
+  text-decoration: none;
+}
+
+.search-input{
+  width: 24px;
+  text-decoration: none;
+}
+
+/*(ユーザー名表示）*/
 .greeting{
   text-align: center;
   margin-bottom: 70px;
