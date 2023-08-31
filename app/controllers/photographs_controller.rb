@@ -1,8 +1,8 @@
 class PhotographsController < ApplicationController
   before_action :authenticate_user!,except:[:index, :show]
-  before_action :set_photograph,only:[:show, :edit, :update, :destroy]
-  before_action :contributor_confirmation,only:[:edit, :destroy, :search]
-  
+  before_action :set_photograph,only:[:show, :edit, :update, :destroy, :search]
+  before_action :contributor_confirmation,only:[:edit, :destroy]
+  before_action :move_to_index, except: [:index, :show, :search]
 
 
   def index
@@ -22,7 +22,6 @@ class PhotographsController < ApplicationController
     if @photograph.save
       redirect_to root_path
     else
-      binding.pry
       render :new
     end
   end
@@ -52,7 +51,8 @@ class PhotographsController < ApplicationController
   end
 
   def search
-    @photographs = Photograph.search(params[:keyword])
+    @photographs = Photograph.includes(:user)
+    @photographs_keyword = Photograph.search(params[:keyword])
   end
 
 
@@ -70,4 +70,9 @@ private
     redirect_to root_path unless @photograph.user == current_user
   end
 
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end  
 end
