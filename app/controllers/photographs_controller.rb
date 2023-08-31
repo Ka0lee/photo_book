@@ -1,6 +1,6 @@
 class PhotographsController < ApplicationController
   before_action :authenticate_user!,except:[:index, :show]
-  before_action :set_photograph,only:[:show, :edit, :update, :destroy, :search]
+  before_action :set_photograph,only:[:show, :edit, :update, :destroy]
   before_action :contributor_confirmation,only:[:edit, :destroy]
   before_action :move_to_index, except: [:index, :show, :search]
 
@@ -52,7 +52,7 @@ class PhotographsController < ApplicationController
 
   def search
     @photographs = Photograph.includes(:user)
-    @photographs_keyword = Photograph.search(params[:keyword])
+    @photographs_keyword = @photographs.search(params[:keyword])
   end
 
 
