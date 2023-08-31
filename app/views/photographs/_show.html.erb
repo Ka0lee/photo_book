@@ -1,0 +1,18 @@
+            <div class="photo-cards">
+              <% @photographs.each do |photo| %>
+                    <div class="photo-cards_content">
+                        <div class="cards-date">
+                           <%= photo.date %>
+                        </div>
+                      <%= link_to photograph_path(photo) do %>
+                          <div class="card-images">
+                              <% photo.images[0..-1].each do |image| %>
+                                <div class="card-image">
+                                  <%= image_tag image %>
+                                </div>
+                              <% end %>
+                          </div>
+                      <% end %>
+                    </div>
+              <% end %>
+            </div>

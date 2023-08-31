@@ -9096,6 +9096,7 @@ text-align: center;
   justify-content: space-around;
   align-items: center;
 }
+
 /*(検索フォーム)*/
 .side-bar_search_link{
 display: flex;
@@ -9259,10 +9260,9 @@ align-items: center;
 
 .card-images {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vh;
+  width: 100vw;
 }
 
 .card-image img {
@@ -9279,4 +9279,22 @@ align-items: center;
 }
 .login-flash-message{
   color: red;
+}
+
+/*戻るボタン*/
+.back-btn-icon{
+  width: 36px;
+}
+
+.back_btn_link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 36px;
+  color: #000;
+
+}
+
+.btn_text {
+
 }

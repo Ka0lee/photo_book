@@ -7,3 +7,10 @@
     <%= render partial: "photograph", locals: { photo: photograph } %>
   <% end %>
 </div>
+
+<div class=back_btn>
+    <%= link_to :back, class: "back_btn_link" do %>
+      <%= image_tag('back_black_36dp.png', size: '185x50', class: "back-btn-icon") %>
+      <div class= back_btn_text>back</div>
+    <% end %>
+</div>

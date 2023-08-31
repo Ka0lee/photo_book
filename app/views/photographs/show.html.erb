@@ -5,18 +5,6 @@
         <%= @photograph.title%>
       </p>
 
-      <% if current_user == @photograph.user %>
-        <div class="photograph__manage">
-          <%= link_to "編集する", edit_photograph_path(@photograph), class: :photograph__btn %>
-          <%= link_to "削除する", photograph_path(@photograph),method: :delete, class: :photograph__btn %>
-        </div>
-        <% else %>
-          <div class="photograph__manage">
-          <%= link_to "編集する", new_user_session_path, class: :photograph__btn %>
-          <%= link_to "削除する", new_user_session_path, class: :photograph__btn %>
-        </div>
-      <% end %>
-
       <div class="photograph__image">
       <% if @photograph.images.attached? %>
        <div class="card-images">
