@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'photographs#index'
   resources :users, only: [:edit, :update]
   resources :photographs, only: [:index, :new, :create, :show, :edit] do
-  member do
+   collection do
     get 'search'
   end
 end
