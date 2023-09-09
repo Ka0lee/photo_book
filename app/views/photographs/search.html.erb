@@ -1,7 +1,13 @@
-<%= form_with(url: search_photographs_path(@photographs), local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
+<div class= brank></div>
+
+<div class="search_link">
+<%= form_with(url: search_photographs_path, local: true, method: :get, class: "search-icon-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "検索する", class: "search-keyword-form" %>
+  <%= image_submit_tag('baseline_saved_search_black_24dp.png', class: "side-bar_search_icons")%>
 <% end %>
+</div>
+
+検索結果
 <div class="contents row">
   <% @photographs.each do |photograph| %>
     <%= render partial: "photograph", locals: { photo: photograph } %>

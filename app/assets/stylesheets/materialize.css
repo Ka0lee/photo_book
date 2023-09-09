@@ -9125,6 +9125,31 @@ align-items: center;
   width: 24px;
   text-decoration: none;
 }
+/*検索結果表示*/
+.search_link{
+  width: 30%;
+  height: 40px;
+
+}
+
+.search-icon-form{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.search-keyword-form{
+height: 100%;
+border-radius: 20px;
+padding-left: 10px;
+}
+
+.brank{
+height: 20vh;
+width: 100%;
+}
+
 
 /*(ユーザー名表示）*/
 .greeting{

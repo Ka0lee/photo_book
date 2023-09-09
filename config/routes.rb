@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   resources :photographs do
    collection do
     get 'search'
+    get 'category/:id', to: "photographs#category"
+
    end
   end
-  get 'category/:id', to: "photographs#category"
 
 end

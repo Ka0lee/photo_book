@@ -10,7 +10,8 @@ class PhotographsController < ApplicationController
     if user_signed_in?
      @photograph = @photographs.where(user_id: current_user.id)
     end
-
+    @photograph_category_id = Photograph.find_by(category_id: params[:id])
+    
   end
 
   def new
@@ -57,8 +58,10 @@ class PhotographsController < ApplicationController
   end
 
   def category
-    @photograph = Photograph.find_by(category_id: params[:id])
+    render :category
+    @photograph_category_id = Photograph.find_by(category_id: params[:id])
     @photographs = Photograph.where(category_id: params[:id]).order('created_at DESC')
+  
   end
 
 
