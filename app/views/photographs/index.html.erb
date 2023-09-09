@@ -24,7 +24,7 @@
           </div>
 
         <div class="side-bar_link">
-          <%= link_to search_photographs_path(@photograph_category_id) do %>
+          <%= link_to '/photographs/category/(:id)' do %>
             <%= image_tag('category_black_24dp.png', class: "side-bar_icons") %>
             カテゴリー
           <% end %>
