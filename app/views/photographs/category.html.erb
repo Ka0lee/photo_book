@@ -1,9 +1,9 @@
 <div class= brank></div>
 
 <div class="category-link">
-  <% @category_names.each do |category_name| %>
+  <% @categories.each do |category| %>
     <div category-link_menu>
-      <%= link_to category_name, photographs_path(category_name: category_name), class: "category_name" %>
+      <%= link_to category.name, photographs_path(category_id: category.id), class: "category_name" %>
     </div>
   <% end %>
 </div>

@@ -58,15 +58,21 @@ class PhotographsController < ApplicationController
   end
 
   def category
-    @categories = Category.all
+    @categories = Category.where.not(id: 1) # idが1でないカテゴリーを取得
     @category_names = @categories.pluck(:name)
-    if @category_name
-      @photographs = Photograph.where(category_id: @category_name.id).order('created_at DESC')
+  
+    if params[:name]
+      @category_name = @categories.find_by(name: params[:name])
+      if @category_name
+        @photographs = Photograph.where(category_id: @category_name.id).order('created_at DESC')
+      else
+        @photographs = []
+      end
     else
       @photographs = []
     end
   end
-
+   
 
 private
 
