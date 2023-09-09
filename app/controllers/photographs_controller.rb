@@ -58,9 +58,13 @@ class PhotographsController < ApplicationController
   end
 
   def category
-    @photograph_category_id = Photograph.find_by(category_id: params[:id])
-    @photographs = Photograph.where(category_id: params[:id]).order('created_at DESC')
-  
+    @categories = Category.all
+    @category_names = @categories.pluck(:name)
+    if @category_name
+      @photographs = Photograph.where(category_id: @category_name.id).order('created_at DESC')
+    else
+      @photographs = []
+    end
   end
 
 
