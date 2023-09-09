@@ -1,55 +1,45 @@
 <div class= brank></div>
+
 <div class = "category-link">
   <div kategory-link_menu>
-    <%= link_to '動物', '/items/category/2' class:"category_name"%>
+    <%= link_to '動物', '/photographs/_category_id', class:"category_name"%>
   </div>
-  
+
     <div kategory-link_menu>
-      <%= link_to '食べ物', '/items/category/3' %>
+      <%= link_to '食べ物', '/photographs/category/3' %>
     </div>
 
   <div kategory-link_menu>
-    <%= link_to '家族', '/items/category/4' %>
+    <%= link_to '家族', '/photographs/category/4' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to '景色', '/items/category/5' %>
+    <%= link_to '景色', '/photographs/category/5' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to '季節', '/items/category/6' %>
+    <%= link_to '季節', '/photographs/category/6' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to '行事', '/items/category/7' %>
+    <%= link_to '行事', '/photographs/category/7' %>
   </div>
 
     <div kategory-link_menu>
-    <%= link_to '旅行', '/items/category/8' %>
+    <%= link_to '旅行', '/photographs/category/8' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to '仕事', '/items/category/9' %>
+    <%= link_to '仕事', '/photographs/category/9' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to '記念', '/items/category/10' %>
+    <%= link_to '記念', '/photographs/category/10' %>
   </div>
 
   <div kategory-link_menu>
-    <%= link_to 'その他', '/items/category/11' %>
+    <%= link_to 'その他', '/photographs/category/11' %>
   </div>
 </div>
 
 
-<%= @photograph.category.name %>
-
-    <%# categories.each do |category| %>
-    <%#tr>
-      <% if category.is_active == true %>
-      <%#td>
-        <%= link_to category.name, photographs_path(category_id: category.id), class: "text-secondary" %>
-      <%# end %>
-    <%#/tr>
-    <% end %>
-    <%#= render partial: "photograph"%>
