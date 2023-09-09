@@ -10,6 +10,7 @@ class PhotographsController < ApplicationController
     if user_signed_in?
      @photograph = @photographs.where(user_id: current_user.id)
     end
+
   end
 
   def new
@@ -53,6 +54,11 @@ class PhotographsController < ApplicationController
   def search
     @photographs = Photograph.includes(:user)
     @photographs_keyword = @photographs.search(params[:keyword])
+  end
+
+  def category
+    @photograph = Photograph.find_by(category_id: params[:id])
+    @photographs = Photograph.where(category_id: params[:id]).order('created_at DESC')
   end
 
 
