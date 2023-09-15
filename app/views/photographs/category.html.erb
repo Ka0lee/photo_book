@@ -2,7 +2,7 @@
 
 <div class="category-link">
   <% @categories.each do |category| %>
-    <div category-link_menu>
+    <div class="category-link_menu">
       <%= link_to category.name, photographs_path(category_id: category.id), class: "category_name" %>
     </div>
   <% end %>
