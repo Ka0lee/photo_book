@@ -63,13 +63,14 @@ class PhotographsController < ApplicationController
   
     if params[:name]
       @category_name = @categories.find_by(name: params[:name])
-      if @category_name
+      @photographs = Photograph.where(category_id: @category_name.id).order('created_at DESC')
+      if @photograph.nil?
         @photographs = Photograph.where(category_id: @category_name.id).order('created_at DESC')
       else
-        @photographs = []
+        render :category
       end
     else
-      @photographs = []
+      
     end
   end
    

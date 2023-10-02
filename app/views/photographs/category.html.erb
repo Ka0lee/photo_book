@@ -1,14 +1,22 @@
 <div class= brank></div>
 
+<div class="category-search">
+    <div class="field">
+    <%#= form_with(search_photographs_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form_field"}) %>
+    <%#= form.submit "検索", class: "search-btn" %>
+    <%# end %>
+    </div>
+</div>
+
+
 <div class="category-link">
   <% @categories.each do |category| %>
     <div class="category-link_menu">
-      <%= link_to category.name, photographs_path(category_id: category.id), class: "category_name" %>
+      <%= link_to category.name, search_photographs_path(category_id: category.id), class: "category_name" %>
     </div>
   <% end %>
 </div>
 
 
-<div class="contents row">
-  <%=photograph_lists(@photographs) %>
-</div>
+<%= render partial: "category_id"%>
