@@ -9,8 +9,8 @@ https://photobook.onrender.com
 # テスト用アカウント
 -Basic認証パスワード：  photo
 -Basic認証ID：  1224
--メールアドレス：  
--パスワード：  
+-メールアドレス：  test@gmail.com
+-パスワード：  testtest1
 
 # 利用方法
 
