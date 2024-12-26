@@ -7,8 +7,9 @@
 <% end %>
 </div>
 
-検索結果
+検索結果 :<% if @photographs_keyword.nil? %> <% else %> <%= params[:keyword] %> <% end %>
 <div class="contents row">
+
   <% @photographs.each do |photograph| %>
     <%= render partial: "photograph", locals: { photo: photograph } %>
   <% end %>

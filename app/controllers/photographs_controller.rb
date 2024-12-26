@@ -55,6 +55,7 @@ class PhotographsController < ApplicationController
   def search
     @photographs = Photograph.includes(:user)
     @photographs_keyword = @photographs.search(params[:keyword])
+    
   end
 
   def category
